@@ -4,8 +4,7 @@
 
 {% block stylesheets %}
     {{ parent() }}
-
-    <link rel="stylesheet" href="{{ asset('css/account.css') }}">
+    {{ encore_entry_link_tags('account') }}
 {% endblock %}
 
 {% block body %}
@@ -15,7 +14,10 @@
                 <div class="row spacepurplebg white">
                     <div class="col-md-2 no-pad">
                         <div class="user-image">
-                            <img src="{{ app.user.avatarUrl }}" class="img-responsive thumbnail">
+                            <img src="{{ app.user.avatarUrl }}"
+                                 class="img-responsive thumbnail"
+                                 alt="user avatar"
+                            >
                         </div>
                     </div>
                     <div class="col-md-10 no-pad">

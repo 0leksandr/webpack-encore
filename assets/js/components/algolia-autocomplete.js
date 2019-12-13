@@ -3,7 +3,7 @@
 import $ from 'jquery';
 import 'autocomplete.js/dist/autocomplete.jquery.js';
 
-import '../../css/algolia-autocomplete.css';
+import '../../css/algolia-autocomplete.scss';
 
 export default function ($elements, dataKey, displayKey) {
     $elements.each(function() {
