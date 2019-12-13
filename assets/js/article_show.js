@@ -1,3 +1,4 @@
+import '../css/article_show.scss';
 import $ from 'jquery';
 
 $(document).ready(function() {
