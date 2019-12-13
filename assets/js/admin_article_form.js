@@ -1,3 +1,7 @@
+'use strict';
+
+import $ from 'jquery';
+
 Dropzone.autoDiscover = false;
 
 $(document).ready(function() {
