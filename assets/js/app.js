@@ -9,6 +9,15 @@
 import '../css/app.css';
 import getAMessage from './get_a_message';
 import $ from 'jquery';
-global.$ = $;
+// global.$ = $; // uncomment to support legacy code
+import 'bootstrap';
 
 console.log(getAMessage(6));
+
+$('.dropdown-toggle').dropdown();
+$('.custom-file-input').on('change', function (event) {
+    var inputFile = event.currentTarget;
+    $(inputFile).parent()
+        .find('.custom-file-label')
+        .html(inputFile.files[0].name);
+});
