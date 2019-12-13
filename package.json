@@ -10,7 +10,7 @@
     "scripts": {
         "dev-server": "encore dev-server",
         "dev": "encore dev",
-        "watch": "encore dev --watch",
+        "watch": "encore dev --watch --profile=true --build-delimiter=\"-------------------------------------------------------------------------\"",
         "build": "encore production --progress"
     }
 }
