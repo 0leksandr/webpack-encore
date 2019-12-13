@@ -2,9 +2,13 @@
 
 import '../css/article_show.scss';
 import $ from 'jquery';
+import 'bootstrap';
 
 $(document).ready(function() {
-    $('.js-like-article').on('click', function(e) {
+    let $like_article = $('.js-like-article');
+    $like_article.tooltip();
+
+    $like_article.on('click', function(e) {
         e.preventDefault();
 
         let $link = $(e.currentTarget);
