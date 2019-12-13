@@ -1,6 +1,10 @@
 @import "~bootstrap";
 @import "~font-awesome";
 
-body {
-    background-color: lightblue !important;
-}
+@import "layout/header";
+@import "layout/footer";
+
+@import "components/ad";
+@import "components/articles";
+@import "components/profile";
+@import "components/sortable";
