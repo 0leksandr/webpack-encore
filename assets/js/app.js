@@ -6,7 +6,7 @@
  */
 
 import '../css/app.scss';
-import getAMessage from './get_a_message';
+import getAMessage from './components/get_a_message';
 import $ from 'jquery';
 // global.$ = $; // uncomment to support legacy code
 import 'bootstrap';
