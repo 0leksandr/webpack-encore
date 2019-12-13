@@ -1,18 +1,22 @@
 'use strict';
 
 import $ from 'jquery';
+import Dropzone from 'dropzone';
+import Sortable from 'sortablejs';
+
+import 'dropzone/dist/dropzone.css';
 
 Dropzone.autoDiscover = false;
 
 $(document).ready(function() {
     const $referenceList = $('.js-reference-list');
     if ($referenceList[0]) {
-        var referenceList = new ReferenceList($('.js-reference-list'));
+        let referenceList = new ReferenceList($('.js-reference-list'));
         initializeDropzone(referenceList);
     }
 
-    var $locationSelect = $('.js-article-form-location');
-    var $specificLocationTarget = $('.js-specific-location-target');
+    let $locationSelect = $('.js-article-form-location');
+    let $specificLocationTarget = $('.js-specific-location-target');
 
     $locationSelect.on('change', function(e) {
         $.ajax({
@@ -131,19 +135,19 @@ class ReferenceList
  * @param {ReferenceList} referenceList
  */
 function initializeDropzone(referenceList) {
-    var formElement = document.querySelector('.js-reference-dropzone');
+    let formElement = document.querySelector('.js-reference-dropzone');
     if (!formElement) {
         return;
     }
 
-    var dropzone = new Dropzone(formElement, {
+    let dropzone = new Dropzone(formElement, {
         paramName: 'reference',
-        init: function() {
-            this.on('success', function(file, data) {
+        init: function () {
+            this.on('success', function (file, data) {
                 referenceList.addReference(data);
             });
 
-            this.on('error', function(file, data) {
+            this.on('error', function (file, data) {
                 if (data.detail) {
                     this.emit('error', file, data.detail);
                 }
