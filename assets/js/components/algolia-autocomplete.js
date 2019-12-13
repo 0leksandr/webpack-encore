@@ -1,3 +1,10 @@
+'use strict';
+
+import $ from 'jquery';
+import 'autocomplete.js/dist/autocomplete.jquery.js';
+
+import '../../css/algolia-autocomplete.css';
+
 $(document).ready(function() {
     $('.js-user-autocomplete').each(function() {
         var autocompleteUrl = $(this).data('autocomplete-url');
